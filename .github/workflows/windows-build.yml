@@ -1,0 +1,51 @@
+name: Build Windows App
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '16'
+
+      - name: Build with Maven
+        run: mvn -B package
+
+      - name: Detect required modules
+        run: |
+          $modules = jdeps --print-module-deps target\YOUR_JAR_NAME.jar
+          echo "MODULES=$modules" >> $env:GITHUB_ENV
+
+      - name: Create runtime image
+        run: |
+          jlink `
+            --add-modules $env:MODULES `
+            --output custom-runtime `
+            --strip-debug `
+            --no-header-files `
+            --no-man-pages
+
+      - name: Package Windows App
+        run: |
+          jpackage `
+            --input target `
+            --name Chunker `           # <-- CHANGE
+            --main-jar chunker.jar ` # <-- CHANGE
+            --type app-image `
+            --runtime-image custom-runtime `
+            --dest output
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-app
+          path: output/
