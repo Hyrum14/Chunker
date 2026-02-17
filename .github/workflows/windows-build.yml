@@ -22,7 +22,7 @@ jobs:
 
       - name: Detect required modules
         run: |
-          $modules = jdeps --print-module-deps target\YOUR_JAR_NAME.jar
+          $modules = jdeps --print-module-deps target\chunker.jar
           echo "MODULES=$modules" >> $env:GITHUB_ENV
 
       - name: Create runtime image
@@ -38,8 +38,8 @@ jobs:
         run: |
           jpackage `
             --input target `
-            --name Chunker `           # <-- CHANGE
-            --main-jar chunker.jar ` # <-- CHANGE
+            --name Chunker `
+            --main-jar chunker.jar `
             --type app-image `
             --runtime-image custom-runtime `
             --dest output
