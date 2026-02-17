@@ -1,0 +1,15 @@
+1) Meta data, min chunk size and max chunk size (10) [DONE]
+2) Extend total to have a character after it that extends the length of the largest chunk name (10) [DONE]
+3) dropdown should be the same as above but only include the checked documents (10) [DONE]
+4) Evaluation output must be in chronological order with the most recent at the bottom of the list (10) [DONE]
+5) Total label -> Sum across all Chunks (10) [DONE]
+6) Eval_Details -> data pages -> Doc_Details -> Chunks_Details (10) [DONE]
+7) Start index should start at 1 and not 0 (10) [DONE]
+8) Document details page sort by name (30) [DONE]
+9) do not accept documents with 0 words (10) [DONE]
+10) phrase special cases
+11) check hash method for function phrases [DONE]
+
+
+
+12) separate the function words to not include the special phrases

@@ -1,0 +1,5 @@
+TODO:
+1. Add section on function parses to technical documents [done]
+2. Add check for UTF-8 encoding and throw warning if document is not in UTF-8 [done]
+3. add catch or warning for documents with only 1 word as the base document [done]
+4. Mismatch for the number chunks in equal var method [done]

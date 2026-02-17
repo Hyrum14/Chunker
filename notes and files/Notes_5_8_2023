@@ -1,0 +1,21 @@
+1. When non-txt files are selected, do NOT count, warn user, display appropriate message (10 min)
+2. Single instance mode? (YES)
+3. Time Added -> (DONE)
+4. Remove date added -> Last Change (Date time 5/8/2023 05:31:45 am) (DONE)
+5. Add parent directoryKey col to left of name (DONE)
+6. How do I count a single file?
+    6a. For equal number no changes needed
+    6b. Should behave the same as Equal Number of Chunks for a single file
+7. Equal variance: Base File Chunk Number (default is 2) BaseFileChunkNum
+    7a. Base file is the smallest file (default) (option to select another base file)
+    7b. everything smaller than the base file receives 1 chunk (for now)
+8. Add (Was Exported) column to end
+    8a. Exported to: director
+    8b. Most recent directoryKey is here
+    8c. just blank cell
+
+9. Directory management
+    9a. default to last location of the added text
+    9b. exporting does NOT updated this cached directoryKey
+
+10.

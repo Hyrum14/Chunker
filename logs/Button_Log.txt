@@ -1,0 +1,5 @@
+[TRACE] Entering javax.swing.AbstractButton::fireActionPerformed (Trace ID: 1) 
+[VALUE] class java.lang.Integer::returnValue: { 0 } 
+[TRACE] Exiting javax.swing.AbstractButton::fireActionPerformed (Trace ID: 1) 
+[TRACE] Entering javax.swing.AbstractButton::fireActionPerformed (Trace ID: 2) 
+[TRACE] Exiting javax.swing.AbstractButton::fireActionPerformed (Trace ID: 2) 

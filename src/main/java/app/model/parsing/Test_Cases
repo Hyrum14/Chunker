@@ -1,0 +1,146 @@
+Test Cases
+
+Case all lower for root
+Input: Word
+Output : [word, 1]
+
+Case numbers:
+disregard all numbers
+Input: all4one
+Output: [empty]
+
+Input: sam is all4one and 14all
+Output: [sam, 1, p1] [is 1, p2] [and 1, p3]
+Recreation: "sam is all4one and 14all"
+
+Input: we have 5carrots carrots5
+Output: [we 1] [have 1]
+
+
+Spelt out numbers are treated as any other word
+
+Apostrophes:
+Input: sam has ' forks
+Output: [sam 1] [has 1] [forks 1]
+
+Input: sam's forks
+Output: [sam's, 1] [forks 1]
+
+Input: sam's sams
+Output: [sam's 1] [sams 1]
+
+Input: sam's sams sam"s
+Output: [sam's 2] [sams 1]
+
+Input: sams' 'sams sams" "sams
+Output: [sams 4]
+
+Input: sams' 'sams sams" "sams
+Output: [sams' 2] [same' 2]
+
+Hyphen:
+Input: one-hundred
+Output: [onehundred, rec_val: one-hundred]
+
+Input: one-hundred onehundred one hundred
+Output: [onehundred 2] [one 1] [hundred 1]
+
+Input: -one one-
+Output: [one 2]
+
+Input: --one two--three four--
+Output: [one 1] [two 1] [three 1] [four 1]
+
+Input: onehundred one-hundred one--hundred
+Output: [onehundred 2] [one 1] [hundred 1]
+
+
+
+
+
+Sentance Ending Punctuation:
+
+Input: it. came? to! pass@
+Output: [it 1] [came 1] [to 1]
+
+Input: .it ?came !to @pass
+Output: [it 1] [came 1] [to 1]
+
+Input: #Belief
+Output: []
+
+Input: end.start
+Output: [end 1] [start 1]
+
+Input: end.!?.start
+Output: [end 1] [start 1]
+
+Input: it(U+2026) (U+2026)it it(U+2026)came
+Output: [it 3] [came 1]
+
+
+Symbols like:
+[%, ^]
+Disregard like numbers
+
+Non-english UTF
+Diacritics on english letters
+Convert to equivalent english letter
+ó => o
+Input: ó o
+Output: [o, 2]
+
+Foreign alphabets:
+Note: treat like numbers
+Input: διακfrankρίνω
+Output: []
+
+
+
+UTF-8 Elipsis Symbol (U+2026)
+
+
+en dash and em dash
+
+Input: (en)frank (em)frank frank(en) frank(em)
+Output: [frank 4]
+
+Input: frank(en)jones
+Output: [frank 1] [jones 1]
+
+Input: frank(en)(em)(en)jones
+Output: [frank 1] [jones 1]
+
+
+
+Inset-Punctuation:
+exactly 1 special cases apply here
+Quotes and hyphens
+
+Sentence Terminating punctuation:
+:;.!?(en)(em)
+Bracket Variants; ({[]})
+all utf-8 semicolon, quote variants must be flattened
+Paragraph and section character
+
+Invalidating symbols:
+7word, wor7d, word7
+%$#@
+
+Special Cases:
+
+Ampersand:
+etc. == &c
+Input: &c
+Output: [etc 1]
+
+Input: &c etc. etc
+Output: [etc 3]
+
+Input: & &&c
+Output: []
+
+To research
+Non-breaking hyphens and Spaces
+Optional Hyphen
+Footnote, endnote marks

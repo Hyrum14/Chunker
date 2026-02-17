@@ -1,0 +1,4 @@
+[TRACE] Entering app.model.cache.Cache::<init> (Trace ID: 1) 
+[TRACE] Exiting app.model.cache.Cache::<init> (Trace ID: 1) 
+[TRACE] Entering app.model.cache.Cache::getInstance (Trace ID: 2) 
+[TRACE] Exiting app.model.cache.Cache::getInstance (Trace ID: 2) 

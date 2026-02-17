@@ -1,0 +1,17 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.server.launchMode": "Standard",
+  "java.import.gradle.enabled": false,
+  "java.import.maven.enabled": true,
+  "java.configuration.maven.userSettings": null,
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar"
+  ],
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.formatOnSave": true
+  },
+  "files.watcherExclude": {
+    "**/target": true
+  }
+}

@@ -1,0 +1,180 @@
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 1) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Document numbers1.txt is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 1) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 2) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Document numbers2.txt is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 2) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 3) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Document Alphabet1.txt is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 3) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 4) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Document numbers3.txt is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 4) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 5) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Document Alphabet3.txt is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 5) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 6) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Document Alphabet2.txt is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 6) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 7) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Add Documents Task 6 / 6 complete, 0 failed } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 7) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 8) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunks have been generated } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 8) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 9) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet1.txt_chunk2_doc1 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 9) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 10) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet1.txt_chunk1_doc1 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 10) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 11) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet1.txt_chunk3_doc1 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 11) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 12) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet2.txt_chunk1_doc6 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 12) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 13) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet2.txt_chunk2_doc6 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 13) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 14) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet2.txt_chunk3_doc6 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 14) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 15) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet2.txt_chunk4_doc6 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 15) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 16) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet2.txt_chunk5_doc6 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 16) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 17) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet3.txt_chunk1_doc3 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 17) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 18) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet3.txt_chunk2_doc3 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 18) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 19) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet3.txt_chunk3_doc3 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 19) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 20) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet3.txt_chunk4_doc3 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 20) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 21) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet3.txt_chunk5_doc3 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 21) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 22) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Alphabet3.txt_chunk6_doc3 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 22) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 23) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk numbers1.txt_chunk1_doc5 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 23) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 24) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk numbers1.txt_chunk2_doc5 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 24) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 25) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk numbers2.txt_chunk1_doc2 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 25) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 26) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk numbers2.txt_chunk2_doc2 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 26) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 27) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk numbers2.txt_chunk3_doc2 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 27) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 28) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk numbers3.txt_chunk1_doc4 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 28) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 29) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk numbers3.txt_chunk2_doc4 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 29) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 30) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk numbers3.txt_chunk3_doc4 is complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 30) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 31) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Chunk Count Task 22 / 22 complete, 0 failed } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 31) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 32) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Page Raw_Data complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 32) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 33) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Page Raw_Function_Words complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 33) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 34) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Page Function_Words_Total complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 34) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 35) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Page Special_Phrase_Counts complete } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 35) 
+[TRACE] Entering java.awt.event.InvocationEvent::dispatch (Trace ID: 36) 
+[TRACE] Begin Arguments 
+[VALUE] class java.lang.String::message: { Successfully saved evaluation Calm_Sepia_Walrus } 
+[TRACE] End Arguments 
+[TRACE] Exiting java.awt.event.InvocationEvent::dispatch (Trace ID: 36) 

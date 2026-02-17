@@ -1,0 +1,72 @@
+1) File exporting/data display repairs (send copy here)
+2) Refactor output match this format (send copy here)
+    a) Raw Data page
+        // every word count
+        1) part of speech (empty)
+        2) word
+        3) count by chunk (and the total)
+
+3) add function word input method (Send another copy)
+    a) append to the raw data page
+        // function words
+        1) part of speech
+        2) word
+        3) count by chunk (and the total)
+
+        // part of speech summary
+        1) part of speech (empty)
+        2) word (this gets its name, "adjective, verb, noun ect.")
+        3) grand total of all chunks
+        4+) count for each chunk
+
+        // Part of speech aggregate counts
+        1) (empty)
+        2) "Function Word Total"
+        3) grand total of all chunks
+        4+) count for each chunk
+
+        // optional group (phrases without part of speech)
+        1) (empty)
+        2) phrase/word
+        3) grand total of all chunks
+        4+) count for each chunk
+
+    b) Add row 2 of each file as the total number of words per chunk, total should be number of words in ALLL chunks
+    c) Grand total of
+    d) spit out recreated chunks
+
+4) add Standardized Count (Send a copy)
+    a) Standardized Count page is ONLY for the new function words
+        Columns:
+            1) Part of Speech
+            2) Phrase/word
+            3) grand total
+            4+) count for each chunk
+        1) Standardized_Count_Factor * (num appearances / total words in the chunk)
+        2) Default: Standardized Count Factor = 10,000
+        3) include aggregate data
+
+    b) Inverted Standardized Count page (Send another copy)
+        Rows:
+            1) Phrase/word
+            2+) count for each chunk
+
+5) Add guard condition to 4b to only include rows that have a non-zero count in the grand total columns.
+
+
+
+
+// C1 C2
+// skip first row for "title"
+// input is a .xlxs file
+
+// input1 the "Function Words File"
+C1: Part of speech
+C2: Word or phrase
+
+// input2 the "Key Words and Phrases File"
+C1: Word or phrase
+
+// if empty or not provided do not include the proportions tab (or transposed)
+
+

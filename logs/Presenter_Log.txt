@@ -1,0 +1,35 @@
+[TRACE] Entering app.view.gui.button.AddDocumentButton::performAction (Trace ID: 1) 
+[TRACE] Begin Arguments 
+[VALUE] class java.util.HashSet::documents: { [C:\Users\walte\Documents\visLang\Chunker\Test2\Alphabet1.txt, C:\Users\walte\Documents\visLang\Chunker\Test2\numbers2.txt, C:\Users\walte\Documents\visLang\Chunker\Test2\numbers1.txt, C:\Users\walte\Documents\visLang\Chunker\Test2\Alphabet2.txt, C:\Users\walte\Documents\visLang\Chunker\Test2\numbers3.txt, C:\Users\walte\Documents\visLang\Chunker\Test2\Alphabet3.txt] } 
+[VALUE] functionPhraseSet: { (null) } 
+[VALUE] class java.lang.Boolean::forceUpdate: { false } 
+[TRACE] End Arguments 
+[TRACE] Exiting app.view.gui.button.AddDocumentButton::performAction (Trace ID: 1) 
+[TRACE] Begin Results 
+[TRACE] End Results 
+[TRACE] Entering app.view.gui.GuiView::reportEvaluationStateChanged (Trace ID: 2) 
+[TRACE] Begin Arguments 
+[VALUE] class utils.objects.Evaluation::evaluationDescription: { utils.objects.Evaluation@38c114cf } 
+[VALUE] class java.util.ImmutableCollections$ListN::documentIds: { [1, 2, 3, 4, 5, 6] } 
+[VALUE] class app.model.chunking.EqualVariance::strategy: { Equal Variance }
+[TRACE] End Arguments 
+[TRACE] Exiting app.view.gui.GuiView::reportEvaluationStateChanged (Trace ID: 2) 
+[TRACE] Begin Results 
+[TRACE] End Results 
+[TRACE] Entering app.view.gui.GuiView::reportEvaluationStateChanged (Trace ID: 3) 
+[TRACE] Begin Arguments 
+[VALUE] class java.util.TreeSet::chunks: { [Alphabet1.txt_chunk1_doc1, Alphabet1.txt_chunk2_doc1, Alphabet1.txt_chunk3_doc1, Alphabet2.txt_chunk1_doc6, Alphabet2.txt_chunk2_doc6, Alphabet2.txt_chunk3_doc6, Alphabet2.txt_chunk4_doc6, Alphabet2.txt_chunk5_doc6, Alphabet3.txt_chunk1_doc3, Alphabet3.txt_chunk2_doc3, Alphabet3.txt_chunk3_doc3, Alphabet3.txt_chunk4_doc3, Alphabet3.txt_chunk5_doc3, Alphabet3.txt_chunk6_doc3, numbers1.txt_chunk1_doc5, numbers1.txt_chunk2_doc5, numbers2.txt_chunk1_doc2, numbers2.txt_chunk2_doc2, numbers2.txt_chunk3_doc2, numbers3.txt_chunk1_doc4, numbers3.txt_chunk2_doc4, numbers3.txt_chunk3_doc4] } 
+[VALUE] class utils.objects.Evaluation::evaluationDescription: { utils.objects.Evaluation@c04813ea } 
+[TRACE] End Arguments 
+[TRACE] Exiting app.view.gui.GuiView::reportEvaluationStateChanged (Trace ID: 3) 
+[TRACE] Begin Results 
+[TRACE] End Results 
+[TRACE] Entering app.view.gui.panel.EvaluationPanel::lambda$fillSaveEvalButton$2 (Trace ID: 4) 
+[TRACE] Begin Arguments 
+[VALUE] class utils.objects.Evaluation::evaluation: { utils.objects.Evaluation@db9253bb } 
+[VALUE] class org.apache.poi.xssf.usermodel.XSSFWorkbook::workbook: { Name: /xl/workbook.xml - Content Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml } 
+[VALUE] class sun.awt.shell.Win32ShellFolder2::selectedFile: { C:\Users\walte\Documents\visLang\Chunker\Test2\output.xlsx } 
+[TRACE] End Arguments 
+[TRACE] Exiting app.view.gui.panel.EvaluationPanel::lambda$fillSaveEvalButton$2 (Trace ID: 4) 
+[TRACE] Begin Results 
+[TRACE] End Results 
