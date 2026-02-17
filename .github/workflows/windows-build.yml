@@ -20,15 +20,10 @@ jobs:
       - name: Build with Maven
         run: mvn -B package
 
-      - name: Detect required modules
-        run: |
-          $modules = jdeps --print-module-deps target\chunker.jar
-          echo "MODULES=$modules" >> $env:GITHUB_ENV
-
       - name: Create runtime image
         run: |
           jlink `
-            --add-modules $env:MODULES `
+            --add-modules java.base,java.logging `
             --output custom-runtime `
             --strip-debug `
             --no-header-files `
@@ -37,9 +32,10 @@ jobs:
       - name: Package Windows App
         run: |
           jpackage `
-            --input target `
             --name Chunker `
+            --input target `
             --main-jar chunker.jar `
+            --main-class app.Chunker `
             --type app-image `
             --runtime-image custom-runtime `
             --dest output
