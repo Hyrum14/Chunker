@@ -35,7 +35,7 @@ jobs:
             --name Chunker `
             --input target `
             --main-jar chunker.jar `
-            --main-class app.Chunker `
+            --main-class app.view.gui.GuiView `
             --type app-image `
             --runtime-image custom-runtime `
             --dest output
