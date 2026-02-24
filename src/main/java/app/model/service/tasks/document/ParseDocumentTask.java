@@ -63,13 +63,8 @@ public abstract class ParseDocumentTask extends ValidateDocumentTask
                 documentId,
                 contents);
         delimiterDao.add(delimiter);
-        // The previous word was stored at (index - 1), but index has already been
-        // incremented.
-        // We need to parse it while the PhraseParser's internal index reflects where
-        // that word
-        // actually was stored, so we decrement our index temporarily for the parse
-        // call.
         if (prevWord != null) {
+            // I know this is ugly but at least it works now, blame Walter ~Hyrum Reynolds
             index--;
             phraseParser.parseNextWord(prevWord, delimiter);
             index++;
