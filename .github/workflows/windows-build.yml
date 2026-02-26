@@ -29,13 +29,17 @@ jobs:
             --no-header-files `
             --no-man-pages
 
+      - name: Prepare app directory with single JAR
+        run: |
+          mkdir -p app-input
+          copy target/chunker.jar app-input/
+
       - name: Package Windows App
         run: |
           jpackage `
             --name Chunker `
-            --input target `
+            --input app-input `
             --main-jar chunker.jar `
-            --main-class app.view.gui.GuiView `
             --type app-image `
             --runtime-image custom-runtime `
             --dest output
