@@ -31,7 +31,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class GuiView extends MainFrame implements View, SelectedOptions {
-    public static final String VERSION = "1055";
+    public static final String VERSION = "1057";
     private Logger buttonLogger;
     private Logger guiLogger;
     private Logger chunkingStrategyLogger;
@@ -54,18 +54,19 @@ public class GuiView extends MainFrame implements View, SelectedOptions {
         Logger serviceLogger;
         Logger presenterLogger;
         try {
-            // TODO verify
-            // Create logs directory if it doesn't exist
-            File logsDir = new File("logs");
+            // Create logs directory in user home if it doesn't exist
+            File logsDir = new File(System.getProperty("user.home"), ".chunker/logs");
             if (!logsDir.exists()) {
                 logsDir.mkdirs();
             }
 
-            buttonLogger = new FileLogger("logs/Button_Log.log");
-            guiLogger = new FileLogger("logs/Gui_Log.log");
-            presenterLogger = new FileLogger("logs/Presenter_Log.log");
-            serviceLogger = new FileLogger("logs/Presenter_Log.log");
-            chunkingStrategyLogger = new FileLogger("logs/Chunking_Strategy_Logger.log");
+            String logPath = logsDir.getAbsolutePath();
+            buttonLogger = new FileLogger(new File(logPath, "Button_Log.log").getAbsolutePath());
+            guiLogger = new FileLogger(new File(logPath, "Gui_Log.log").getAbsolutePath());
+            presenterLogger = new FileLogger(new File(logPath, "Presenter_Log.log").getAbsolutePath());
+            serviceLogger = new FileLogger(new File(logPath, "Presenter_Log.log").getAbsolutePath());
+            chunkingStrategyLogger = new FileLogger(
+                    new File(logPath, "Chunking_Strategy_Logger.log").getAbsolutePath());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             String message = "Failed to setup logger: " + e.getMessage();

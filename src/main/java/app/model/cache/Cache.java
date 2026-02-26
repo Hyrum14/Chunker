@@ -11,7 +11,12 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Cache {
-    private static final String CONFIG_FILE = "cfg/config.properties";
+    private static final String CONFIG_FILE;
+
+    static {
+        CONFIG_FILE = new File(System.getProperty("user.home"), ".chunker/config.properties").getAbsolutePath();
+    }
+
     static Cache instance = null;
     private final Logger logger;
     DaoFactory factory;
@@ -103,6 +108,10 @@ public class Cache {
     private void initConfig() {
         try {
             File file = new File(CONFIG_FILE);
+            File parentDir = file.getParentFile();
+            if (!parentDir.exists()) {
+                parentDir.mkdirs();
+            }
             if (!file.createNewFile())
                 throw new IOException();
         } catch (IOException ex) {
