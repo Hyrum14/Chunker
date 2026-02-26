@@ -29,10 +29,14 @@ jobs:
             --no-header-files `
             --no-man-pages
 
-      - name: Prepare app directory with single JAR
+      - name: Prepare app directory with single JAR and resources
         run: |
           mkdir -p app-input
+          mkdir -p app-input/logs
+          mkdir -p app-input/cfg
           copy target/chunker.jar app-input/
+          # Create empty config file to be filled by app on first run
+          type nul > app-input/cfg/config.properties
 
       - name: Package Windows App
         run: |
