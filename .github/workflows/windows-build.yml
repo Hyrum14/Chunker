@@ -23,7 +23,7 @@ jobs:
       - name: Create runtime image
         run: |
           jlink `
-            --add-modules java.base,java.logging,java.desktop,java.prefs,java.xml `
+            --add-modules java.base,java.logging,java.desktop,java.prefs,java.xml,jdk.charsets `
             --output custom-runtime `
             --strip-debug `
             --no-header-files `
