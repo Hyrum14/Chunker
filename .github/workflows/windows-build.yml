@@ -22,6 +22,7 @@ jobs:
 
       - name: Create runtime image
         run: |
+          if (Test-Path custom-runtime) { Remove-Item -Recurse -Force custom-runtime }
           jlink `
             --add-modules java.base,java.logging,java.desktop,java.prefs,java.xml,jdk.charsets `
             --output custom-runtime `
