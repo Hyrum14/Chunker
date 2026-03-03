@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.chunker</groupId>
   <artifactId>chunker</artifactId>
-  <version>1.0.63</version>
+  <version>1.0.64</version>
   <packaging>jar</packaging>
   <name>Chunker</name>
   <description>Word Counter and Chunker Program</description>
