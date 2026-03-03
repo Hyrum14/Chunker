@@ -19,6 +19,11 @@ jobs:
           $ns.AddNamespace("pom", "http://maven.apache.org/POM/4.0.0")
           
           $versionNode = $pom.SelectSingleNode("//pom:project/pom:version", $ns)
+          if ($null -eq $versionNode) {
+            Write-Host "ERROR: Could not find version node"
+            exit 1
+          }
+          
           $currentVersion = $versionNode.InnerText
           Write-Host "Current version: $currentVersion"
           
@@ -34,6 +39,14 @@ jobs:
           $pom.Save([System.IO.Path]::GetFullPath("pom.xml"))
           
           Write-Host "Version updated in pom.xml"
+          
+          # Commit the version increment
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add pom.xml
+          git commit -m "Increment version to $newVersion" || true
+          git push || true
+          
           # export for later steps
           echo "newVersion=$newVersion" >> $GITHUB_OUTPUT
         shell: pwsh
