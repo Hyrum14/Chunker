@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Increment version
+        id: increment-version
         run: |
           [xml]$pom = Get-Content pom.xml
           $currentVersion = $pom.project.version
@@ -29,6 +30,8 @@ jobs:
           $pom.Save("pom.xml")
           
           Write-Host "Version updated in pom.xml"
+          # export for later steps
+          echo "newVersion=$newVersion" >> $GITHUB_OUTPUT
         shell: pwsh
 
       - name: Set up Java
@@ -71,8 +74,12 @@ jobs:
 
       - name: Package Windows App
         run: |
+          # build a clean name by stripping dots from the version
+          $ver = '${{ steps.increment-version.outputs.newVersion }}' -replace '\.', ''
+          $appName = "Chunker$ver"
+
           jpackage `
-            --name Chunker `
+            --name $appName `
             --input app-input `
             --main-jar chunker.jar `
             --type app-image `
