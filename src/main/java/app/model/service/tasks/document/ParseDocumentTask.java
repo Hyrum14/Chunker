@@ -73,6 +73,14 @@ public abstract class ParseDocumentTask extends ValidateDocumentTask
 
     @Override
     public void storeOccurrence(String contents) {
+        // diagnose mysterious single-letter tokens that appear in Windows builds
+        if (contents != null && contents.length() == 1) {
+            char c = contents.charAt(0);
+            if (c == 'i' || c == '\u00EF' || c == '\u00C3' || c == '\u00AF') {
+                System.out.printf("[DEBUG] storeOccurrence char='%s' code=0x%04x\n", contents, (int) c);
+            }
+        }
+
         String root = RootConverter.convert(contents);
 
         Token token = new Token(

@@ -81,6 +81,12 @@ public class GuiView extends MainFrame implements View, SelectedOptions {
     }
 
     public static void main(String[] args) {
+        // force UTF-8 encoding regardless of runtime defaults
+        System.setProperty("file.encoding", "UTF-8");
+        // trigger Charset initialization and print diagnostic
+        String cs = java.nio.charset.Charset.defaultCharset().name();
+        System.out.println("[Startup] default charset=" + cs + " file.encoding=" + System.getProperty("file.encoding"));
+
         SwingUtilities.invokeLater(() -> {
             GuiView guiView = new GuiView(VERSION);
             guiView.setVisible(true);
