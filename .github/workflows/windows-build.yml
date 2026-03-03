@@ -91,5 +91,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: windows-app
+          name: chunker-windows-app-${{ steps.increment-version.outputs.newVersion }}
           path: output/
