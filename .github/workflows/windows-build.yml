@@ -15,7 +15,11 @@ jobs:
         id: increment-version
         run: |
           [xml]$pom = Get-Content pom.xml
-          $currentVersion = $pom.project.version
+          $ns = New-Object System.Xml.XmlNamespaceManager($pom.NameTable)
+          $ns.AddNamespace("pom", "http://maven.apache.org/POM/4.0.0")
+          
+          $versionNode = $pom.SelectSingleNode("//pom:project/pom:version", $ns)
+          $currentVersion = $versionNode.InnerText
           Write-Host "Current version: $currentVersion"
           
           $versionParts = $currentVersion -split "\."
@@ -26,7 +30,7 @@ jobs:
           $newVersion = "$major.$minor.$patch"
           Write-Host "New version: $newVersion"
           
-          $pom.project.version = $newVersion
+          $versionNode.InnerText = $newVersion
           $pom.Save([System.IO.Path]::GetFullPath("pom.xml"))
           
           Write-Host "Version updated in pom.xml"
