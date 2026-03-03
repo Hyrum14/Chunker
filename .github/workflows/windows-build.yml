@@ -6,6 +6,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -13,6 +15,8 @@ jobs:
 
       - name: Increment version
         id: increment-version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           [xml]$pom = Get-Content pom.xml
           $ns = New-Object System.Xml.XmlNamespaceManager($pom.NameTable)
@@ -45,6 +49,9 @@ jobs:
           git config user.name "GitHub Actions"
           git add pom.xml
           git commit -m "Increment version to $newVersion" || true
+          # Configure git to use the GITHUB_TOKEN for auth
+          $token = $env:GITHUB_TOKEN
+          git remote set-url origin "https://x-access-token:${token}@github.com/${{ github.repository }}.git"
           git push || true
           
           # export for later steps
