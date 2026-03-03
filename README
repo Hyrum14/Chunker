@@ -1,3 +1,5 @@
+This is a project made by a previous developer, and I was tasked with fixing it. The previous devleper (RefinedSnack on github) already put it on github, although I can't find the repository anymore. Below is the README they wrote. 
+
 # Chunker Project README
 
 Welcome to the Chunker project! This project utilizes the Model-View-Presenter (MVP) design pattern to implement a user interface (UI) application that allows you to break down data into smaller chunks. This README provides an overview of the project, its components, and how they interact.
@@ -57,3 +59,4 @@ We hope you find the Chunker project useful and that it helps you effectively ma
 Happy chunking!
 
 - Walter DeGering
+
