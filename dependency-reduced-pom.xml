@@ -4,10 +4,34 @@
   <groupId>com.chunker</groupId>
   <artifactId>chunker</artifactId>
   <name>Chunker</name>
-  <version>1.0.0</version>
+  <version>1.0.61</version>
   <description>Word Counter and Chunker Program</description>
   <build>
     <plugins>
+      <plugin>
+        <groupId>com.google.code.maven-replacer-plugin</groupId>
+        <artifactId>maven-replacer-plugin</artifactId>
+        <version>1.4.1</version>
+        <executions>
+          <execution>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>replace</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <includes>
+            <include>src/main/java/app/view/gui/GuiView.java</include>
+          </includes>
+          <replacements>
+            <replacement>
+              <token>@PROJECT_VERSION@</token>
+              <value>${project.version}</value>
+            </replacement>
+          </replacements>
+        </configuration>
+      </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.11.0</version>

@@ -31,7 +31,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class GuiView extends MainFrame implements View, SelectedOptions {
-    public static final String VERSION = "1061";
+    public static final String VERSION = "1.0.61";
     private Logger buttonLogger;
     private Logger guiLogger;
     private Logger chunkingStrategyLogger;

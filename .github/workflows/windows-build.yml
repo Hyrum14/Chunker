@@ -11,6 +11,26 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Increment version
+        run: |
+          [xml]$pom = Get-Content pom.xml
+          $currentVersion = $pom.project.version
+          Write-Host "Current version: $currentVersion"
+          
+          $versionParts = $currentVersion -split "\."
+          $major = $versionParts[0]
+          $minor = $versionParts[1]
+          $patch = [int]$versionParts[2] + 1
+          
+          $newVersion = "$major.$minor.$patch"
+          Write-Host "New version: $newVersion"
+          
+          $pom.project.version = $newVersion
+          $pom.Save("pom.xml")
+          
+          Write-Host "Version updated in pom.xml"
+        shell: pwsh
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
@@ -30,12 +50,22 @@ jobs:
             --no-header-files `
             --no-man-pages
 
-      - name: Prepare app directory with single JAR and resources
+      - name: Prepare app directory with source, binaries and resources
         run: |
+          # start clean each time
+          Remove-Item -Recurse -Force app-input -ErrorAction SilentlyContinue
           mkdir -p app-input
+
+          # create the folders our runtime expects
           mkdir -p app-input/logs
           mkdir -p app-input/cfg
+
+          # include source so that someone can inspect/modify it later
+          mkdir -p app-input/src
+          cp -Recurse src\* app-input/src\
+
           copy target/chunker.jar app-input/
+
           # Create empty config file to be filled by app on first run
           New-Item -ItemType File -Path app-input/cfg/config.properties -Force | Out-Null
 
@@ -48,7 +78,8 @@ jobs:
             --type app-image `
             --runtime-image custom-runtime `
             --dest output `
-            --java-options "-Dfile.encoding=UTF-8"
+            --java-options "-Dfile.encoding=UTF-8" `
+            --icon icon.ico
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

@@ -1,6 +1,17 @@
 /out/
 
 target/
+custom-runtime/
+app-input/
+logs/
+cfg/
+New Folder/
+notes and files/
+Test1/
+Test2/
+Test3/
+Test4/
+Test5/
 *.class
 *.log
 *.iml
