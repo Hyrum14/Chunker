@@ -27,7 +27,7 @@ jobs:
           Write-Host "New version: $newVersion"
           
           $pom.project.version = $newVersion
-          $pom.Save("pom.xml")
+          $pom.Save([System.IO.Path]::GetFullPath("pom.xml"))
           
           Write-Host "Version updated in pom.xml"
           # export for later steps

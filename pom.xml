@@ -7,7 +7,7 @@
 
     <groupId>com.chunker</groupId>
     <artifactId>chunker</artifactId>
-    <version>1.0.61</version>
+    <version>1.0.62</version>
     <packaging>jar</packaging>
 
     <name>Chunker</name>
